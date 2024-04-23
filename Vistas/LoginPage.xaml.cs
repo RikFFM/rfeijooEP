@@ -32,12 +32,22 @@ public partial class LoginPage : ContentPage
         else
         {
             DisplayAlert("Error", "Usuario/Contraseña Incorrecta", "Cerrar");
+            txtUser.Text = "";
+            txtPasswrd.Text = "";
         }
             
     }
 
     private void abtAction_Clicked(object sender, EventArgs e)
     {
-       
+        string nombre = "Riccardo";
+        string apellido = "Feijoó";
+        string curso = "Octavo";
+        string materia = "Desarrollo Móvil";
+        string paralelo = "B";
+
+        string mensaje = $"Nombre: {nombre}\nApellido: {apellido}\nCurso: {curso}\nMateria: {materia}\nParalelo: {paralelo}";
+
+        DisplayAlert("Mis Datos", mensaje, "Cerrar");
     }
 }
